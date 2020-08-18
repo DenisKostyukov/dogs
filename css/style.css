@@ -7,8 +7,14 @@ body {
   margin: 0;
 }
 
+.block-title {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 35px;
+  color: #545454;
+}
+
 .header {
-  z-index: 999;
+ z-index: 999;
  width: 100%;
  position: absolute;
  top: 0;
@@ -38,10 +44,12 @@ body {
 
 .header__logo--subtitle {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 13px;
+  font-size: 15px;
+  color: #ffffff;
 }
 
 .navigation__link {
+  font-size: 20px;
   font-family: Arial, Helvetica, sans-serif;
   color: #cdcdcd;
   text-decoration: none;
@@ -53,38 +61,74 @@ body {
 }
 
 .main {
-  z-index: 99999;
   display: flex;
   align-items: center;
-  justify-content: center;
   position: relative;
   height: 100vh;
-  min-height: 600px;
+  min-height: 150px;
   background-repeat: no-repeat;
-  background-position:right  top;
-  background-size:80% 100%;
+  background-position:right  bottom;
+  background-size:80% 80%;
 }
 .main__overlay{
-  opacity: .2;
   height: 100vh;
   width: 100%;
   position: absolute;
 }
 .main__inner {
-display: flex;
-justify-content: space-between;
-}
-
-.main__text {
-  z-index: 999;
+  max-width: 450px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .main__text--title {
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #ffffff;
   font-size: 44px;
-  width: 40%;
 }
 
 .text {
-  width: 40%;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #9b9a99;  
+  font-size: 15px;
+  line-height: 1.6;
+}
+.btn{
+  outline: none;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 17px;
+  background-color: rgb(241, 205, 179);
+  color: rgb(41, 41, 41);
+  width: 60%;
+  padding:18px 0;
+  border: none;
+  border-radius: 50px;
+}
+
+.about {
+  padding: 90px 0;
+}
+
+.about__text--title{
+  min-width: 240px;
+  
+  width: 70%;
+}
+
+.about__inner {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.about__text {
+  min-width: 280px;
+  margin: 0 auto;
+  width: 50%;
+}
+
+.about__img{
+  margin: 0 auto;
 }
