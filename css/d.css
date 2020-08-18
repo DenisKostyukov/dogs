@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  height: 95vh;
+  /* gradient overlay */
+  background-image: linear-gradient(to top, rgba(89, 106, 114, 0.6), rgba(206, 220, 23, 0.4)),
+  url(../images/main-dog.png);
+  background-size: cover;
+  /* build polygon */
+  clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
+  font-family: sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+}
+
+.header_box {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
