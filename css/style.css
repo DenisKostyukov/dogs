@@ -61,6 +61,7 @@ body {
 }
 
 .main {
+  background-image:url(../images/main-dog.png);
   display: flex;
   align-items: center;
   position: relative;
@@ -87,6 +88,10 @@ body {
   font-size: 44px;
 }
 
+.main__text--paragraph{
+  max-width: 400px;
+}
+
 .text {
   font-family: Arial, Helvetica, sans-serif;
   color: #9b9a99;  
@@ -99,10 +104,15 @@ body {
   font-size: 17px;
   background-color: rgb(241, 205, 179);
   color: rgb(41, 41, 41);
-  width: 60%;
+  width: 50%;
   padding:18px 0;
   border: none;
   border-radius: 50px;
+}
+
+.btn:hover{
+  background-color: rgb(253, 220, 196);
+  transition: .3s ease-in-out;
 }
 
 .about {
@@ -110,8 +120,7 @@ body {
 }
 
 .about__text--title{
-  min-width: 240px;
-  
+  min-width: 312px;
   width: 70%;
 }
 
@@ -132,3 +141,140 @@ body {
 .about__img{
   margin: 0 auto;
 }
+
+.ourfriends {
+  margin: 0 auto;
+  background-color: rgb(246, 246, 246);
+  padding: 80px 0 70px 0;
+}
+
+.ourfriends__inner {
+  margin: 0 auto;
+}
+
+.ourfriends__title {
+  margin: 0 auto;
+  width: 45%;
+  text-align: center;
+  min-width: 400px;
+}
+
+.ourfriends__cards {
+  margin: 65px auto ;
+  width: 80%;
+}
+
+
+.ourfriends__card {
+  outline: none;
+  margin: 0 20px;
+  background-color: rgb(250, 250, 250);
+  padding: 40px 0 30px 0;
+  background: #fff;
+
+  
+}
+
+.ourfriends__card:hover{
+  transition: .3s ease-in-out;
+  box-shadow: 0px 2px 30.1px 4.9px rgba(13, 13, 13, 0.04);
+}
+
+.ourfriends__card-image {
+  height: 279px;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.ourfriends__card-name {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 20px;
+  color: #545454;
+  text-align: center;
+}
+
+.ourfriends__card-btn {
+  background-color: transparent;
+  border: 2px solid #f1cdb3;
+  width: 70%;
+  display: block;
+  margin: 0 auto;
+}
+.ourfriends__card-btn:hover{
+  background-color: rgb(241, 205, 179);
+  transition: .3s ease-in-out;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  opacity: 1;
+  line-height: 0;
+  display: flex;
+  width: 50px;
+  height: 50px;
+  border-radius:50%;
+  border: 3px solid #f1cdb3;
+  background-color: transparent;
+  align-items: center;
+  justify-content: center;
+}
+.slick-prev:before{
+  content: url(../images/arrow-left.png);
+ 
+}
+.slick-next:before {
+  content: url(../images/arrow-right.png);
+}
+  
+.slick-next, .slick-prev{
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius:50%;
+}
+
+.slick-next{
+  right: -100px;
+}
+
+.slick-prev{
+  left: -100px;
+}
+
+.slick-prev:hover,
+.slick-next:hover{
+  transition: .3s ease-in-out;
+  color: #f1cdb3;
+  outline: none;
+  background: #f1cdb3;
+}
+
+.ourfriend__btn{
+  width: 100%;
+  max-width: 270px;
+  display: block;
+  margin: 0 auto;
+}
+
+.Button_Hover {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 1920px;
+  height: 3735px;
+  z-index: 172;
+}
+
+.Make_a_friend {
+  font-size: 17px;
+  font-family: "Georgia";
+  color: rgb(41, 41, 41);
+  line-height: 3.353;
+  text-align: right;
+  position: absolute;
+  left: 418px;
+  top: 600px;
+  z-index: 171;
+}
+
