@@ -3,14 +3,19 @@
 }
 
 body {
+  font-family: Georgia,
+  'Times New Roman',
+  Times,
+  serif;
   padding: 0;
   margin: 0;
 }
 
 .block-title {
-  font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 35px;
   color: #545454;
+  text-align: center;
+  font-weight: 400;
 }
 
 .header {
@@ -22,7 +27,7 @@ body {
 }
 
 .container {
-  max-width: 1170px;
+  max-width: 1200px;
   width: 100%;
   margin: 0 auto;
   padding: 0 15px;
@@ -36,7 +41,6 @@ body {
 }
 
 .header__logo--title {
-  font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 32px;
   color: #f1cdb3;
   margin: 0;
@@ -84,6 +88,7 @@ body {
 }
 
 .main__text--title {
+  text-align: left;
   color: #ffffff;
   font-size: 44px;
 }
@@ -100,7 +105,6 @@ body {
 }
 .btn{
   outline: none;
-  font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 17px;
   background-color: rgb(241, 205, 179);
   color: rgb(41, 41, 41);
@@ -120,8 +124,9 @@ body {
 }
 
 .about__text--title{
+  text-align: left;
   min-width: 312px;
-  width: 70%;
+  width: 40%;
 }
 
 .about__inner {
@@ -139,6 +144,8 @@ body {
 }
 
 .about__img{
+  display: block;
+  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -188,7 +195,6 @@ body {
 }
 
 .ourfriends__card-name {
-  font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 20px;
   color: #545454;
   text-align: center;
@@ -256,25 +262,109 @@ body {
   display: block;
   margin: 0 auto;
 }
-
-.Button_Hover {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 1920px;
-  height: 3735px;
-  z-index: 172;
+.help {
+  padding: 80px 0 70px 0;
 }
 
-.Make_a_friend {
-  font-size: 17px;
-  font-family: "Georgia";
-  color: rgb(41, 41, 41);
-  line-height: 3.353;
-  text-align: right;
-  position: absolute;
-  left: 418px;
-  top: 600px;
-  z-index: 171;
+.help__inner {
+  margin: 0 auto;
 }
 
+.help__title {
+  margin: 0;
+}
+
+.help__items {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content:space-evenly;
+  margin: 0 auto;
+  max-width: 1020px;
+}
+
+.help__item {
+  display: block;
+  width: 180px;
+  margin-top: 85px;
+}
+
+
+.help__item-image {
+  display: block;
+  margin: 0 auto;
+}
+
+.help__item-title {
+  font-size: 20px;
+  color: #545454;
+  text-align: center;
+}
+
+.donation {
+  padding: 70px 0 80px 0;
+  background-color:#f6f6f6;
+}
+
+.donation__inner {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.donation__pet{
+  display: block;
+  max-width: 50%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.donation__description {
+  margin: 0 auto;
+  width: 50%;
+  min-width:300px ;
+}
+
+.donation__title {
+
+  max-width: 370px;
+  text-align: left;
+}
+
+.donation__bank {
+  font-size: 15px;
+  color: #545454;
+}
+
+.donation__card {
+  width: 45%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color:#f1cdb3;
+  border-radius:10px;
+  padding: 17px 15px;
+  min-width: 290px;
+
+}
+
+.donation__card-image {
+  display: block;
+
+}
+
+.donation__card-number {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  color: #292929;
+ margin: 0;
+}
+
+.donation__text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: #b2b2b2;
+  width:60%;
+}
