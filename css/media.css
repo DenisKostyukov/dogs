@@ -1,0 +1,12 @@
+@media (max-width:820px) {
+
+  .visible-lg {
+    display: none;
+  }
+
+  .m-menu-link {
+    display: block;
+  }
+
+
+}
