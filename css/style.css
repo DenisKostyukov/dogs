@@ -105,6 +105,7 @@ body {
   }
 
   .close-menu {
+    color: #000;
     text-decoration: none;
     text-align: left;
     font-size: 40px;
