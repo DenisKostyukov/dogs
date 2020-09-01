@@ -19,6 +19,7 @@ body {
   color: #545454;
   text-align: center;
   font-weight: 400;
+  min-width: 240px;
 }
 
 .header {
@@ -83,7 +84,7 @@ body {
   right: 0;
   top: 0;
   height: 100vh;
-  width: 50%;
+  width: 320px;
   text-align: center;
   list-style: none;
   font-size: 3rem;
@@ -95,11 +96,11 @@ body {
   }
 
 .navigation-mobile>.navigation__link{
-  margin-right: 0;
-  width: 50%;
+  margin: 0 auto;
+  width: 100%;
 }
 
-  .navigation-mobile__active {
+  .navigation-mobile.active {
     transform: translateX(0%);
   }
 
@@ -126,10 +127,18 @@ body {
   
 }
 
-
-
 .navigation__link:last-child{
   margin-right: 0;
+}
+
+.content{
+  transition: .3s;
+  z-index: 0;
+  transform: translateX(0);
+}
+
+.content.active{
+  transform: translateX(-320px);
 }
 
 .main {
@@ -162,6 +171,7 @@ body {
 }
 
 .main__text--paragraph{
+
   max-width: 400px;
 }
 
@@ -193,8 +203,8 @@ body {
 
 .about__text--title{
   text-align: left;
-  min-width: 312px;
-  width: 40%;
+  
+  width: 60%;
 }
 
 .about__inner {
@@ -229,9 +239,9 @@ body {
 
 .ourfriends__title {
   margin: 0 auto;
-  width: 45%;
+  width: 60%;
   text-align: center;
-  min-width: 400px;
+  
 }
 
 .ourfriends__cards {
@@ -445,6 +455,7 @@ body {
   align-items: center;
   justify-content: space-between;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .footer__block {
@@ -475,11 +486,13 @@ body {
 
 .footer__dog{
   display: block;
+  max-width: 100%;
 }
 
 .fixed {
   position: fixed;
   top: 0;
   left: 0;
+  
   background: linear-gradient(90deg, #4e4139, 40%, #1a191b);
 }

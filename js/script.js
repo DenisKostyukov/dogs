@@ -2,7 +2,29 @@
    slidesToShow: 3,
    centerMode: true,
      centerPadding: '30px',
-     arrows:false,
+   responsive: [
+     {
+       breakpoint: 850,
+       settings: {
+         slidesToShow: 2,
+       }
+     },
+     {
+       breakpoint: 630,
+       settings: {
+         slidesToShow: 1,
+         centerMode: false,
+       }
+     },
+     {
+       breakpoint: 420,
+       settings: {
+         slidesToShow: 1,
+         arrows:false,
+         centerMode: false,
+       }
+     },
+   ]
  })
 
 $('.navigation__link, .header__logo').click(function () {
@@ -13,38 +35,44 @@ $('.navigation__link, .header__logo').click(function () {
     scrollTop: scrollTop
   }, 500);
 });
+
 $(window).scroll(function () {
-  var docscroll = $(document).scrollTop();
-  var height = $(window).height()-1;
-  if (docscroll > height) {
+  var position = $(document).scrollTop();
+  var nav = $('.navigation-mobile').hasClass('active');
+    block_position = $('.about').offset().top -2; // расположение блока, от которого и зависит фиксированность хэдера
+  if (position > block_position && nav==false) { // если позиция скролла страницы больше, то ставим фикс
     $('.header').addClass('fixed');
-    
   } else {
     $('.header').removeClass('fixed');
   }
 });
 
 $(function () {
+  var content=$('.content');
   var link = $('.m-menu-link');
   var close = $('.close-menu');
   var menu = $('.navigation-mobile');
-  var width = $('.navigation-mobile').width();
   link.on('click', function (event) {
     event.preventDefault();
-    menu.toggleClass('navigation-mobile__active');
+    menu.addClass('active');
+    content.addClass('active');
     $('.header').removeClass('fixed');
-    $('.header').removeClass('fixed');
-  
-    $('body').animate({ 
-      right: '285px'
-    }, 200);
   });
   close.on('click', function (event) {
+    var position = $(document).scrollTop();
+    if (position < block_position) { // если позиция скролла страницы больше, то ставим фикс
+    } else {
+      $('.header').addClass('fixed');
+    }
     event.preventDefault();
-    menu.toggleClass('navigation-mobile__active');
-    $('.header').addClass('fixed');
-    $('body').animate({
-      right: '0px'
-    }, 200);
+    menu.removeClass('active');
+    content.removeClass('active');
   });
 });
+$('.navigation__link').click(function () {
+  
+  $('.navigation-mobile').removeClass('active');
+  $('.content').removeClass('active');
+
+});
+
