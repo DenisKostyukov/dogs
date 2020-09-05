@@ -26,7 +26,7 @@ $('.ourfriends__cards').slick({
   ]
 })
 
-$('.navigation__link').click(function () {
+$('.navigation__link, header__logo').click(function () {
   var scrollName = $(this).attr('data-scroll');
   scrollElem = $(scrollName);
   scrollTop = scrollElem.offset().top;
