@@ -39,7 +39,7 @@ $(window).scroll(function () {
   var position = $(document).scrollTop();
   var nav = $('.navigation-mobile').hasClass('active');
   var block_position = $('.about').offset().top - 2; // расположение блока, от которого и зависит фиксированность хэдера
-  if (position > block_position) { // если позиция скролла страницы больше, то ставим фикс
+  if (position > block_position && nav == false) { // если позиция скролла страницы больше, то ставим фикс
     $('.header').addClass('fixed');
   } else {
     $('.header').removeClass('fixed');
