@@ -60,7 +60,7 @@ $(function () {
   close.on('click', function (event) {
     var block_position = $('.about').offset().top - 2;
     var position = $(document).scrollTop();
-    if (position < block_position) { // если позиция скролла страницы больше, то ставим фикс
+    if (position < block_position) {
     } else {
       $('.header').addClass('fixed');
     }
